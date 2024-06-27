@@ -57,7 +57,7 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
-        selectedItemColor: Colors.deepPurple, // Color for the active tab
+        selectedItemColor: Colors.brown, // Color for the active tab
         unselectedItemColor: Colors.grey, // Color for the inactive tabs
         items: const [
           BottomNavigationBarItem(

@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                       height: 50,
                       width: 350,
                       decoration: BoxDecoration(
-                        color: Color(0xff0ACF83),
+                        color: Color(0xff9f7464),
                       ),
                       child: Center(
                         child: Text(
@@ -196,7 +196,7 @@ class LoginScreen extends StatelessWidget {
                           Text(
                             "Signup",
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.brown,
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                             ),
