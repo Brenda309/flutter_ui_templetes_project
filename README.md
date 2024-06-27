@@ -1,5 +1,5 @@
-# Calculator plus flutter UI 
-In this project i:
+# Calculator plus Flutter UI 
+In this project I :
   1. Create a tab-based navigation with multiple screens accessible through tabs. (SignIn, SignUp, and Calculator)
      
          ▻ Design tab icons and labels, and handle navigation between different tabs.
