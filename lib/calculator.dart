@@ -65,15 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget buildButton(String buttonText) {
     return Expanded(
       child: SizedBox(
-        height: 120.0,
+        height: 100.0, // Reduce the height to fit within the screen
         child: Padding(
-          padding: const EdgeInsets.all(13.0),
+          padding: const EdgeInsets.all(8.0), // Reduce the padding to fit within the screen
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20), // Rectangle shape with no rounded corners
+                borderRadius: BorderRadius.circular(20),
               ),
-              side: BorderSide(width: 3.0, color: Colors.brown), // Customize border if needed
+              side: BorderSide(width: 3.0, color: Colors.brown),
             ),
             onPressed: () => buttonPressed(buttonText),
             child: Text(
@@ -92,7 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: AppDrawer(),  // Ensure the Drawer is included here
+      // drawer: AppDrawer(
+      //   onItemTap: (int index) {
+      //     // handle navigation here
+      //   },
+      // ),
       body: Column(
         children: [
           Container(
@@ -109,47 +113,60 @@ class _MyHomePageState extends State<MyHomePage> {
           Expanded(
             child: Divider(),
           ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  buildButton("7"),
-                  buildButton("8"),
-                  buildButton("9"),
-                  buildButton("/"),
-                ],
-              ),
-              Row(
-                children: [
-                  buildButton("4"),
-                  buildButton("5"),
-                  buildButton("6"),
-                  buildButton("*"),
-                ],
-              ),
-              Row(
-                children: [
-                  buildButton("1"),
-                  buildButton("2"),
-                  buildButton("3"),
-                  buildButton("-"),
-                ],
-              ),
-              Row(
-                children: [
-                  buildButton("."),
-                  buildButton("0"),
-                  buildButton("00"),
-                  buildButton("+"),
-                ],
-              ),
-              Row(
-                children: [
-                  buildButton("CLEAR"),
-                  buildButton("="),
-                ],
-              ),
-            ],
+          Expanded(
+            flex: 3, // Allow the buttons to expand to fit the remaining space
+            child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      buildButton("7"),
+                      buildButton("8"),
+                      buildButton("9"),
+                      buildButton("/"),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      buildButton("4"),
+                      buildButton("5"),
+                      buildButton("6"),
+                      buildButton("*"),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      buildButton("1"),
+                      buildButton("2"),
+                      buildButton("3"),
+                      buildButton("-"),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      buildButton("."),
+                      buildButton("0"),
+                      buildButton("00"),
+                      buildButton("+"),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      buildButton("CLEAR"),
+                      buildButton("="),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -1,56 +1,36 @@
 import 'package:flutter/material.dart';
-import 'calculator.dart';
-import 'signup.dart';
-import 'loginScreen.dart';
 
 class AppDrawer extends StatelessWidget {
+  final Function(int) onItemTap;
+
+  const AppDrawer({Key? key, required this.onItemTap}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: <Widget>[
+        children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.brown,
+              color: Colors.blue,
             ),
-            child: Text(
-              'Menu',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-              ),
-            ),
+            child: Text('Menu'),
           ),
           ListTile(
             leading: Icon(Icons.calculate),
             title: Text('Calculator'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => MyHomePage(title: 'Flutter Calculator')),
-              );
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.person_add),
-            title: Text('Signup'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => Signup()),
-              );
-            },
+            onTap: () => onItemTap(0),
           ),
           ListTile(
             leading: Icon(Icons.login),
             title: Text('Login'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-              );
-            },
+            onTap: () => onItemTap(1),
+          ),
+          ListTile(
+            leading: Icon(Icons.person_add),
+            title: Text('Signup'),
+            onTap: () => onItemTap(2),
           ),
         ],
       ),

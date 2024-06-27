@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Login page'),
       ),
-      drawer: AppDrawer(),
+      // drawer: AppDrawer(onItemTap: (int ) {  },),
       body: Stack(
         children: [
           const Image(
