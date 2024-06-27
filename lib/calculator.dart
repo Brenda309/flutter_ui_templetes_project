@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'drawer.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   double num2 = 0;
   String operand = "";
 
-  buttonPressed(String buttonText) {
+  void buttonPressed(String buttonText) {
     if (buttonText == "CLEAR") {
       _output = "0";
       num1 = 0;
@@ -45,11 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
       if (operand == "-") {
         _output = (num1 - num2).toString();
       }
-
       if (operand == "*") {
         _output = (num1 * num2).toString();
       }
-
       if (operand == "/") {
         _output = (num1 / num2).toString();
       }
@@ -92,7 +89,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: AppDrawer(),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      drawer: AppDrawer(),  // Ensure the Drawer is included here
       body: Column(
         children: [
           Container(

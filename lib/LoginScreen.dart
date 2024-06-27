@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:animated_switch/animated_switch.dart';
 
+import 'drawer.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Login'),
+      ),
+      drawer: AppDrawer(),
       body: Stack(
         children: [
           const Image(
