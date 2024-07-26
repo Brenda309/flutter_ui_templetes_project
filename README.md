@@ -22,7 +22,8 @@ In this project I :
 <img width="410" alt="calcu" src="https://github.com/Brenda309/flutter_ui_templetes_project/assets/72613775/455e0536-1ec2-44d5-9eac-8a1e7506ad4f">
     </td>
       <td>
-      <img width="412" alt="drawer" src="https://github.com/Brenda309/flutter_ui_templetes_project/assets/72613775/d9868759-957a-451f-ade0-fa3b0076c4a2"></td>
+      <img width="412" alt="drawer" src="https://github.com/Brenda309/flutter_ui_templetes_project/assets/72613775/d9868759-957a-451f-ade0-fa3b0076c4a2">
+      </td>
   </tr>
  
 
